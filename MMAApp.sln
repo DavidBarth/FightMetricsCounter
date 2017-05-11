@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMAApp", "MMAApp.csproj", "{811FBEA2-0BD0-4CCB-86A8-4E6A4F878819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMAApp.DAL", "MMAApp.DAL\MMAApp.DAL.csproj", "{561F8DA8-44A3-4A68-B9BF-401DD2604948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMAApp.Model", "MMAApp.Model\MMAApp.Model.csproj", "{43274BF9-E708-4C29-8B77-08955CD916AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{811FBEA2-0BD0-4CCB-86A8-4E6A4F878819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811FBEA2-0BD0-4CCB-86A8-4E6A4F878819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811FBEA2-0BD0-4CCB-86A8-4E6A4F878819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811FBEA2-0BD0-4CCB-86A8-4E6A4F878819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{561F8DA8-44A3-4A68-B9BF-401DD2604948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561F8DA8-44A3-4A68-B9BF-401DD2604948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561F8DA8-44A3-4A68-B9BF-401DD2604948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561F8DA8-44A3-4A68-B9BF-401DD2604948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43274BF9-E708-4C29-8B77-08955CD916AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43274BF9-E708-4C29-8B77-08955CD916AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43274BF9-E708-4C29-8B77-08955CD916AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43274BF9-E708-4C29-8B77-08955CD916AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

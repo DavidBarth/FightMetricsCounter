@@ -1,0 +1,5 @@
+C:\DAVE\MMAApp\MMAApp.Model\bin\Debug\MMAApp.Model.dll
+C:\DAVE\MMAApp\MMAApp.Model\bin\Debug\MMAApp.Model.pdb
+C:\DAVE\MMAApp\MMAApp.Model\obj\Debug\MMAApp.Model.csprojResolveAssemblyReference.cache
+C:\DAVE\MMAApp\MMAApp.Model\obj\Debug\MMAApp.Model.dll
+C:\DAVE\MMAApp\MMAApp.Model\obj\Debug\MMAApp.Model.pdb
