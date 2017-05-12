@@ -1,5 +1,8 @@
 ﻿using MMAApp.Model;
+using MMAApp.Utility;
+using System;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace MMAApp.ViewModel
 {
@@ -52,10 +55,71 @@ namespace MMAApp.ViewModel
             }
         }
 
+
+        public ICommand AddFighterCommand { get; set; }
+        public ICommand StartMetricsCommand { get; set; }
+
+
+        /// <summary>
+        /// constructor
+        /// </summary>
         public StartWindowViewModel()
         {
-           LoadData();
+            LoadData();
+            LoadCommands();
         }
+
+        /// <summary>
+        /// commands for buttons
+        /// </summary>
+        private void LoadCommands()
+        {
+            AddFighterCommand = new CustomCommand(AddFighter, CanAddFighter);
+            StartMetricsCommand = new CustomCommand(SartMetrics, CanStartMetrics);
+        }
+
+        /// <summary>
+        /// will determine if the command can be invoked or not
+        /// a fighter should be selected
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>bool</returns>
+        private bool CanAddFighter(object obj)
+        {
+            if (SelectedFigther != null)
+                return true;
+            return false;
+        }
+
+        /// <summary>
+        /// Adds figther to FigthersToMatch list
+        /// </summary>
+        /// <param name="obj"></param>
+        private void AddFighter(object obj)
+        {
+            
+        }
+
+        /// <summary>
+        /// will determine if command can be invoked or not
+        /// two fighters should be in the list
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>bool</returns>
+        private bool CanStartMetrics(object obj)
+        {
+            return false;
+        }
+        /// <summary>
+        /// Open new window to for metrics operations
+        /// </summary>
+        /// <param name="obj"></param>
+        private void SartMetrics(object obj)
+        {
+            
+        }
+
+       
 
         public void LoadData()
         {

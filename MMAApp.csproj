@@ -65,6 +65,8 @@
     </ApplicationDefinition>
     <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\IDataService.cs" />
+    <Compile Include="Utility\CustomCommand.cs" />
+    <Compile Include="Utility\Messenger.cs" />
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModel\MatchWindowViewModel.cs" />
     <Compile Include="ViewModel\StartWindowViewModel.cs" />
