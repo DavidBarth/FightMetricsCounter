@@ -1,6 +1,7 @@
 ﻿using MMAApp.Model;
 using MMAApp.Utility;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MMAApp.ViewModel
@@ -90,7 +91,7 @@ namespace MMAApp.ViewModel
         {
             if (SelectedFigther != null)
             {
-                if (FigthersForMatch.Count == 2)
+                if (CheckNumberOfFigthers())
                     return false;
                 return true;
             }
@@ -104,7 +105,15 @@ namespace MMAApp.ViewModel
         /// <param name="obj"></param>
         private void AddFighter(object obj)
         {
-            FigthersForMatch.Add(SelectedFigther);           
+            if (FigthersForMatch.Contains(SelectedFigther))
+            {
+                MessageBox.Show("Figther is already in the list!");
+            }
+            else
+            {
+                FigthersForMatch.Add(SelectedFigther);
+            }
+                       
         }
 
         /// <summary>
@@ -115,6 +124,8 @@ namespace MMAApp.ViewModel
         /// <returns>bool</returns>
         private bool CanStartMetrics(object obj)
         {
+            if (CheckNumberOfFigthers())
+                return true;
             return false;
         }
         /// <summary>
@@ -157,6 +168,11 @@ namespace MMAApp.ViewModel
             Figthers.Add(f2);
         }
 
-       
+       private bool CheckNumberOfFigthers()
+        {
+            if (FigthersForMatch.Count == 2)
+                return true;
+            return false;
+        }
     }
 }
