@@ -1,4 +1,5 @@
 ﻿using MMAApp.Model;
+using MMAApp.Services;
 using MMAApp.Utility;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -59,7 +60,7 @@ namespace MMAApp.ViewModel
         public ICommand AddFighterCommand { get; set; }
         public ICommand StartMetricsCommand { get; set; }
 
-
+        private IDialogService _dialogService { get; set; }
         /// <summary>
         /// constructor
         /// </summary>
@@ -136,6 +137,7 @@ namespace MMAApp.ViewModel
         private void SartMetrics(object obj)
         {
             Messenger.Default.Send(FigthersForMatch);
+            _dialogService.ShowDialog();
         }
 
        
@@ -147,6 +149,7 @@ namespace MMAApp.ViewModel
         {
             LoadData();
             FigthersForMatch = new ObservableCollection<Fighter>();
+            _dialogService = new DialogService();
         }
 
         /// <summary>
