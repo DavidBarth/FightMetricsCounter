@@ -2,11 +2,13 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MMAApp.Utility
 {
+    /// <summary>
+    /// Default Messenger implementation from StackOverFlow
+    /// Used to apply loose coupling between ViewModels
+    /// </summary>
     class Messenger
     {
         private static readonly object CreationLock = new object();

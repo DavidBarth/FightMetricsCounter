@@ -1,14 +1,29 @@
 ﻿using MMAApp.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MMAApp.Utility;
+using System.Collections.ObjectModel;
 
 namespace MMAApp.ViewModel
 {
     class MatchWindowViewModel
     {
-        public List<Fighter> FightersInMatch { get; set; }
+        public ObservableCollection<Fighter> FightersInMatch { get; set; }
+
+
+        /// <summary>
+        /// constructor
+        /// </summary>
+        public MatchWindowViewModel()
+        {
+            Messenger.Default.Register<ObservableCollection<Fighter>>(this, OnFigthersReceived);
+        }
+
+        /// <summary>
+        /// Assign message parameter to local var
+        /// </summary>
+        /// <param name="figthers"></param>
+        private void OnFigthersReceived(ObservableCollection<Fighter> figthers)
+        {
+            FightersInMatch = figthers;
+        }
     }
 }

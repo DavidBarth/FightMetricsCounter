@@ -129,12 +129,13 @@ namespace MMAApp.ViewModel
             return false;
         }
         /// <summary>
-        /// Open new window to for metrics operations
+        /// Open new window for metrics operations
+        /// Send list of selected fighters to MatchWindow
         /// </summary>
         /// <param name="obj"></param>
         private void SartMetrics(object obj)
         {
-            
+            Messenger.Default.Send(FigthersForMatch);
         }
 
        
@@ -168,7 +169,11 @@ namespace MMAApp.ViewModel
             Figthers.Add(f2);
         }
 
-       private bool CheckNumberOfFigthers()
+        /// <summary>
+        /// helper to check number of fighters in the list
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckNumberOfFigthers()
         {
             if (FigthersForMatch.Count == 2)
                 return true;
