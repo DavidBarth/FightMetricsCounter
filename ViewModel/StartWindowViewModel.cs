@@ -89,8 +89,13 @@ namespace MMAApp.ViewModel
         private bool CanAddFighter(object obj)
         {
             if (SelectedFigther != null)
+            {
+                if (FigthersForMatch.Count == 2)
+                    return false;
                 return true;
+            }
             return false;
+           
         }
 
         /// <summary>
@@ -152,14 +157,6 @@ namespace MMAApp.ViewModel
             Figthers.Add(f2);
         }
 
-        private bool CheckNumberOfSelectedFighters()
-        {
-            if (FigthersForMatch.Count == 2)
-            {
-                return true;
-            }
-            return false;
-
-        }
+       
     }
 }
