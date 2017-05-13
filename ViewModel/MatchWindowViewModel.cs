@@ -29,5 +29,7 @@ namespace MMAApp.ViewModel
             Figther1 = FightersInMatch.First();
             Figther2 = FightersInMatch.Last();
         }
+
+        
     }
 }
