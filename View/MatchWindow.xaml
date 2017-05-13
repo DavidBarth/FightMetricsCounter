@@ -6,17 +6,40 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:MMAApp.View"
         mc:Ignorable="d"
-        Title="Match Window - Fight Metrics" Height="800" Width="800"
+        Title="Match Window - Fight Metrics" Height="400" Width="800"
         xmlns:viewModel="clr-namespace:MMAApp.ViewModel"
         DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=MatchWindowViewModel}"
         
         >
 
-    <Grid>
-        <Label x:Name="label" Content="Figther 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="45,34,0,0"/>
-        <TextBox x:Name="textBox" Text="{Binding FightersInMatch[0].Name}" HorizontalAlignment="Left" Height="23" Margin="114,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label1" Content="Fighter 2" HorizontalAlignment="Left" Margin="428,34,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox1" Text="{Binding FightersInMatch[1].Name}" HorizontalAlignment="Left" Height="23" Margin="490,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="111"/>
+    <Grid Height="390" VerticalAlignment="Top" Margin="0,0,0,-20">
+        <Label x:Name="Fighter1Label" Content="Figther 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="45,34,0,0"/>
+        <TextBox x:Name="textBox" Text="{Binding FightersInMatch[0].Name}" HorizontalAlignment="Left" Height="23" Margin="139,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+
+        <Label x:Name="Fighter2Label" Content="Fighter 2" HorizontalAlignment="Left" Margin="428,34,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" Text="{Binding FightersInMatch[1].Name}" HorizontalAlignment="Left" Height="23" Margin="520,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="111"/>
+
+        <GroupBox x:Name="groupBox" Header="Button Controls" HorizontalAlignment="Left" Margin="45,86,0,0" VerticalAlignment="Top" Height="129" Width="586">
+        </GroupBox>
+
+
+
+
+        <Button x:Name="button" Content="START ROUND" HorizontalAlignment="Left" Margin="666,325,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="444,151,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox2_Copy" HorizontalAlignment="Left" Height="23" Margin="444,182,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox2_Copy1" HorizontalAlignment="Left" Height="23" Margin="443,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="350,155,0,0" TextWrapping="Wrap" Text="Body Strikes W" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="350,186,0,0" TextWrapping="Wrap" Text="Leg Strikes E" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="350,121,0,0" TextWrapping="Wrap" Text="Head Strikes Q" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625" Width="88"/>
+        <TextBox x:Name="textBox2_Copy2" HorizontalAlignment="Left" Height="23" Margin="139,154,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox2_Copy3" HorizontalAlignment="Left" Height="23" Margin="139,185,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox2_Copy4" HorizontalAlignment="Left" Height="23" Margin="138,120,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="45,158,0,0" TextWrapping="Wrap" Text="Body Strikes W" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="45,189,0,0" TextWrapping="Wrap" Text="Leg Strikes E" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="45,124,0,0" TextWrapping="Wrap" Text="Head Strikes Q" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625" Width="88"/>
+
 
     </Grid>
 </Controls:MetroWindow>
