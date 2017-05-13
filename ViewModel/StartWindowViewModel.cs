@@ -1,6 +1,5 @@
 ﻿using MMAApp.Model;
 using MMAApp.Utility;
-using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -65,9 +64,12 @@ namespace MMAApp.ViewModel
         /// </summary>
         public StartWindowViewModel()
         {
-            LoadData();
             LoadCommands();
+            InitializeUI();
+            
         }
+
+        
 
         /// <summary>
         /// commands for buttons
@@ -97,7 +99,7 @@ namespace MMAApp.ViewModel
         /// <param name="obj"></param>
         private void AddFighter(object obj)
         {
-            
+            FigthersForMatch.Add(SelectedFigther);           
         }
 
         /// <summary>
@@ -120,8 +122,20 @@ namespace MMAApp.ViewModel
         }
 
        
+        
+        /// <summary>
+        /// initializes UI
+        /// </summary>
+        private void InitializeUI()
+        {
+            LoadData();
+            FigthersForMatch = new ObservableCollection<Fighter>();
+        }
 
-        public void LoadData()
+        /// <summary>
+        /// populates Figther list
+        /// </summary>
+        private void LoadData()
         {
             Figthers = new ObservableCollection<Fighter>();
             Fighter f1 = new Fighter
@@ -138,7 +152,7 @@ namespace MMAApp.ViewModel
             Figthers.Add(f2);
         }
 
-        public bool CheckNumberOfSelectedFighters()
+        private bool CheckNumberOfSelectedFighters()
         {
             if (FigthersForMatch.Count == 2)
             {
