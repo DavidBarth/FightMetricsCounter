@@ -6,39 +6,42 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:MMAApp.View"
         mc:Ignorable="d"
-        Title="Match Window - Fight Metrics" Height="400" Width="691"
+        Title="Match Window - Fight Metrics" Height="400" Width="533"
         xmlns:viewModel="clr-namespace:MMAApp.ViewModel"
         DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=MatchWindowViewModel}"
+                      KeyDown="Strike_Event"
+                      Background="Bisque"
         
         >
 
     <Grid Height="390" VerticalAlignment="Top" Margin="0,0,0,-20">
-        <Label x:Name="Fighter1Label" Content="Figther 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="45,34,0,0"/>
-        <TextBlock x:Name="textBox1" Text="{Binding FightersInMatch[0].Name}" HorizontalAlignment="Left" Height="23" Margin="139,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Fighter1Label" Content="Figther 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="45,27,0,0"/>
+        <TextBlock x:Name="textBox1" Background="White" Text="{Binding FightersInMatch[0].Name}" HorizontalAlignment="Left" Height="23" Margin="45,58,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="121"/>
 
 
-        <Label x:Name="Fighter2Label" Content="Fighter 2" HorizontalAlignment="Left" Margin="350,34,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBox2" Text="{Binding FightersInMatch[1].Name}" HorizontalAlignment="Left" Height="23" Margin="443,34,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="121"/>
+        <Label x:Name="Fighter2Label" Content="Fighter 2" HorizontalAlignment="Left" Margin="350,27,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBox2" Background="White" Text="{Binding FightersInMatch[1].Name}" HorizontalAlignment="Left" Height="23" Margin="350,58,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="121"/>
 
-        <GroupBox x:Name="groupBox" Header="Button Controls" HorizontalAlignment="Left" Margin="45,86,0,0" VerticalAlignment="Top" Height="129" Width="586">
+        <GroupBox x:Name="groupBox" Header="Press characters accordingly" Margin="22,86,23,0" VerticalAlignment="Top" Height="129">
         </GroupBox>
 
         <TextBlock x:Name="HeadTextBlock1" HorizontalAlignment="Left" Margin="45,124,0,0" TextWrapping="Wrap" Text="Head Strikes Q" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625" Width="88"/>
         <TextBlock x:Name="BodyText1Block1" HorizontalAlignment="Left" Margin="45,158,0,0" TextWrapping="Wrap" Text="Body Strikes W" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
         <TextBlock x:Name="LegTextBlock1" HorizontalAlignment="Left" Margin="45,189,0,0" TextWrapping="Wrap" Text="Leg Strikes E" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
-        <TextBlock KeyDown="HeadStrike_Event" x:Name="Head1" HorizontalAlignment="Left" Height="23" Margin="138,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" />
+        <TextBlock  x:Name="Head1" HorizontalAlignment="Left" Height="23" Margin="138,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" />
         <TextBlock x:Name="Body1" HorizontalAlignment="Left" Height="23" Margin="139,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="Leg1" HorizontalAlignment="Left" Height="23" Margin="139,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
         <TextBlock x:Name="HeadTextBlock2" HorizontalAlignment="Left" Margin="350,155,0,0" TextWrapping="Wrap" Text="Body Strikes O" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
         <TextBlock x:Name="BodyTextBlock2" HorizontalAlignment="Left" Margin="350,186,0,0" TextWrapping="Wrap" Text="Leg Strikes P" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
         <TextBlock x:Name="LegTextBlock2" HorizontalAlignment="Left" Margin="350,121,0,0" TextWrapping="Wrap" Text="Head Strikes I" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625" Width="88"/>
-        <TextBlock x:Name="Head2" HorizontalAlignment="Left" Height="23" Margin="443,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"/>
-        <TextBlock x:Name="Body2" HorizontalAlignment="Left" Height="23" Margin="444,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="Leg2" HorizontalAlignment="Left" Height="23" Margin="444,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        
-        <Button x:Name="button" Content="START ROUND" HorizontalAlignment="Left" Margin="277,317,0,0" VerticalAlignment="Top" Width="100"/>
-       
+        <TextBlock x:Name="Head2" HorizontalAlignment="Left" Height="23" Margin="443,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <TextBlock x:Name="Body2" TextWrapping="Wrap" Margin="443,155,23,211"/>
+        <TextBlock x:Name="Leg2" HorizontalAlignment="Left" Margin="443,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+
+       <!-- <Button x:Name="button" Command="{Binding SaveResults}" Content="SAVE RESULTS" HorizontalAlignment="Left" Margin="213,295,0,0" VerticalAlignment="Top" Width="100"/>
+        -->
+
 
     </Grid>
 </Controls:MetroWindow>

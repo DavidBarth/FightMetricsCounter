@@ -12,6 +12,9 @@ namespace MMAApp.ViewModel
         public Fighter Figther1 { get; set; }
         public Fighter Figther2 { get; set; }
 
+        public int HeadStrikeA { get; set; }
+
+
         /// <summary>
         /// constructor
         /// </summary>

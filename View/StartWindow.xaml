@@ -9,6 +9,7 @@
         Title="Start Window - Fight Metrics" Height="350" Width="591"
         xmlns:viewModel="clr-namespace:MMAApp.ViewModel"
         DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=StartWindowViewModel}"
+                      Background="Bisque"
         >
     <Grid>
         <Label x:Name="label" Content="Select Figther For Match" HorizontalAlignment="Left" Margin="37,27,0,0" VerticalAlignment="Top" Width="146" Height="31"/>

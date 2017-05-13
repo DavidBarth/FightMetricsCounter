@@ -97,6 +97,7 @@ namespace MMAApp.ViewModel
                 return true;
             }
             return false;
+            
            
         }
 
@@ -125,9 +126,11 @@ namespace MMAApp.ViewModel
         /// <returns>bool</returns>
         private bool CanStartMetrics(object obj)
         {
+            
             if (CheckNumberOfFigthers())
                 return true;
             return false;
+            
         }
         /// <summary>
         /// Open new window for metrics operations
@@ -163,9 +166,6 @@ namespace MMAApp.ViewModel
                 Name = "Nate Diaz"
             };
 
-
-            
-
             Fighter f2 = new Fighter
             {
                 Name = "Conor McGregor"
@@ -180,10 +180,11 @@ namespace MMAApp.ViewModel
         /// </summary>
         /// <returns></returns>
         private bool CheckNumberOfFigthers()
-        {
+        {    
             if (FigthersForMatch.Count == 2)
                 return true;
             return false;
+        
         }
     }
 }
