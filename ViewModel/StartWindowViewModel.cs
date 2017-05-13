@@ -140,7 +140,7 @@ namespace MMAApp.ViewModel
             _dialogService.ShowDialog();
         }
 
-       
+                
         
         /// <summary>
         /// initializes UI
@@ -163,9 +163,12 @@ namespace MMAApp.ViewModel
                 Name = "Nate Diaz"
             };
 
+
+            
+
             Fighter f2 = new Fighter
             {
-                Name = "Connor McGregor"
+                Name = "Conor McGregor"
             };
 
             Figthers.Add(f1);

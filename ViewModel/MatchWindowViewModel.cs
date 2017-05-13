@@ -1,13 +1,16 @@
 ﻿using MMAApp.Model;
 using MMAApp.Utility;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace MMAApp.ViewModel
 {
-    class MatchWindowViewModel
+    public class MatchWindowViewModel
     {
         public ObservableCollection<Fighter> FightersInMatch { get; set; }
 
+        public Fighter Figther1 { get; set; }
+        public Fighter Figther2 { get; set; }
 
         /// <summary>
         /// constructor
@@ -20,10 +23,11 @@ namespace MMAApp.ViewModel
         /// <summary>
         /// Assign message parameter to local var
         /// </summary>
-        /// <param name="figthers"></param>
         private void OnFigthersReceived(ObservableCollection<Fighter> figthers)
         {
             FightersInMatch = figthers;
+            Figther1 = FightersInMatch.First();
+            Figther2 = FightersInMatch.Last();
         }
     }
 }
