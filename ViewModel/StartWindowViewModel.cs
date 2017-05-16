@@ -1,6 +1,7 @@
 ﻿using MMAApp.Model;
 using MMAApp.Services;
 using MMAApp.Utility;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -71,7 +72,17 @@ namespace MMAApp.ViewModel
             
         }
 
-        
+
+        public List<Results> results { get; set; }
+        private void OnResultReceived(List<Results> obj)
+        {
+            results = obj;
+            
+
+            
+            MessageBox.Show("All good");
+           
+        }
 
         /// <summary>
         /// commands for buttons
@@ -80,6 +91,8 @@ namespace MMAApp.ViewModel
         {
             AddFighterCommand = new CustomCommand(AddFighter, CanAddFighter);
             StartMetricsCommand = new CustomCommand(SartMetrics, CanStartMetrics);
+            
+            //Messenger.Default.Register<UpdateListMessage>(this, OnUpdateListMessage);
         }
 
         /// <summary>
