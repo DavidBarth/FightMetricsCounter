@@ -30,8 +30,8 @@ namespace MMAApp.ViewModel
         public Fighter Figther1 { get; set; }
         public Fighter Fighter2 { get; set; }
 
-        private Results r1;
-        private Results r2;
+        private Results result1;
+        private Results result2;
 
         /// <summary>
         /// constructor
@@ -50,10 +50,10 @@ namespace MMAApp.ViewModel
         {
             Figther1 = new Fighter();
             Fighter2 = new Fighter();
-            r1 = new Results();
-            r2 = new Results();
-            Figther1.Results.Add(r1);
-            Fighter2.Results.Add(r2);
+            result1 = new Results();
+            result2 = new Results();
+            Figther1.Results.Add(result1);
+            Fighter2.Results.Add(result2);
         }
 
 
@@ -63,34 +63,34 @@ namespace MMAApp.ViewModel
         /// <param name="key"></param>
         public void AddPointToFigther(Key key)
         {
-            if (key.ToString().Equals("Q"))
+            if (key.ToString()=="Q")
             {
-                r1.hS++;
+                result1.headShot++;
             }
 
-            if (key.ToString().Equals("W"))
+            if (key.ToString()=="W")
             {
-                r1.bS++;
+                result1.bodyShot++;
             }
 
-            if (key.ToString().Equals("E"))
+            if (key.ToString()=="E")
             {
-                r1.lS++;
+                result1.legShot++;
             }
 
-            if (key.ToString().Equals("I"))
+            if (key.ToString()=="I")
             {
-                r2.hS++;
+                result2.headShot++;
             }
 
-            if (key.ToString().Equals("O"))
+            if (key.ToString()=="O")
             {
-                r2.bS++;
+                result2.bodyShot++;
             }
 
-            if (key.ToString().Equals("P"))
+            if (key.ToString()=="P")
             {
-                r2.lS++;
+                result2.legShot++;
             }
         }
 

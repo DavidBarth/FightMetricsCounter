@@ -22,5 +22,3 @@ C:\DAVE\MMAApp\obj\Debug\View\MatchWindow.baml
 C:\DAVE\MMAApp\obj\Debug\View\StartWindow.baml
 C:\DAVE\MMAApp\bin\Debug\MMAApp.Model.dll
 C:\DAVE\MMAApp\bin\Debug\MMAApp.Model.pdb
-C:\DAVE\MMAApp\bin\Debug\MMAApp.exe.CodeAnalysisLog.xml
-C:\DAVE\MMAApp\bin\Debug\MMAApp.exe.lastcodeanalysissucceeded

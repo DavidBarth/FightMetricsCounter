@@ -2,15 +2,15 @@
 {
     public class Results
     {
-        public int hS { get; set; }
-        public int bS { get; set; }
-        public int lS { get; set; }
+        public int headShot { get; set; }
+        public int bodyShot { get; set; }
+        public int legShot { get; set; }
 
         public Results()
         {
-            bS = 0;
-            hS = 0;
-            lS = 0;
+            bodyShot = 0;
+            headShot = 0;
+            legShot = 0;
         }
     }
 }
