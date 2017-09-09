@@ -1,4 +1,5 @@
-﻿using MMAApp.Model;
+﻿using MMAApp.Extensions;
+using MMAApp.Model;
 using MMAApp.Services;
 using MMAApp.Utility;
 using System.Collections.Generic;
@@ -10,10 +11,22 @@ namespace MMAApp.ViewModel
 {
     class StartWindowViewModel :ViewModelBase
     {
+
+        private ObservableCollection<Fighter> _fighter;
         /// <summary>
         /// binds to the select figther list view
         /// </summary>
-        public ObservableCollection<Fighter> Figthers { get; set; }
+        public ObservableCollection<Fighter> Fighters
+        {
+            get
+            {
+                return _fighter;
+            }
+            set
+            {
+                _fighter = value;
+            }
+        }
 
         /// <summary>
         /// binds to the fighters selected for match list
@@ -173,19 +186,9 @@ namespace MMAApp.ViewModel
         /// </summary>
         private void LoadData()
         {
-            Figthers = new ObservableCollection<Fighter>();
-            Fighter f1 = new Fighter
-            {
-                Name = "Nate Diaz"
-            };
-
-            Fighter f2 = new Fighter
-            {
-                Name = "Conor McGregor"
-            };
-
-            Figthers.Add(f1);
-            Figthers.Add(f2);
+            IDataService dataService = new DataService();
+            Fighters = dataService.GetFighters().ToObservableCollection();
+            
         }
 
         /// <summary>

@@ -44,6 +44,12 @@
     <Compile Include="MMARepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MMAApp.Model\MMAApp.Model.csproj">
+      <Project>{43274BF9-E708-4C29-8B77-08955CD916AE}</Project>
+      <Name>MMAApp.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

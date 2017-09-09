@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Extensions\ListExtension.cs" />
     <Compile Include="Messages\UpdateListMessage.cs" />
     <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\DialogService.cs" />
@@ -122,6 +123,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="MMAApp.DAL\MMAApp.DAL.csproj">
+      <Project>{561F8DA8-44A3-4A68-B9BF-401DD2604948}</Project>
+      <Name>MMAApp.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="MMAApp.Model\MMAApp.Model.csproj">
       <Project>{43274BF9-E708-4C29-8B77-08955CD916AE}</Project>
       <Name>MMAApp.Model</Name>

@@ -3,3 +3,5 @@ C:\DAVE\MMAApp\MMAApp.DAL\bin\Debug\MMAApp.DAL.pdb
 C:\DAVE\MMAApp\MMAApp.DAL\obj\Debug\MMAApp.DAL.dll
 C:\DAVE\MMAApp\MMAApp.DAL\obj\Debug\MMAApp.DAL.pdb
 C:\DAVE\MMAApp\MMAApp.DAL\obj\Debug\MMAApp.DAL.csprojResolveAssemblyReference.cache
+C:\DAVE\MMAApp\MMAApp.DAL\bin\Debug\MMAApp.Model.dll
+C:\DAVE\MMAApp\MMAApp.DAL\bin\Debug\MMAApp.Model.pdb

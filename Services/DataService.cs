@@ -1,12 +1,17 @@
-﻿using System;
+﻿using MMAApp.DAL;
+using MMAApp.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MMAApp.Services
 {
     class DataService : IDataService
     {
+ 
+        public List<Fighter> GetFighters()
+        {
+
+            IMMARepository repository = new MMARepository();
+            return repository.GetFighters();
+        }
     }
 }
