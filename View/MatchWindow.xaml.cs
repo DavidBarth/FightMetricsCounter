@@ -26,7 +26,9 @@ namespace MMAApp.View
         public List<Results> MatchResults { get; set; }
 
         private int _secondCounter = 0;
-
+        private const long _roundLength = 300000; // 5mins
+        private const long _timerInterval = 1000; //1s
+        
         private MatchWindowViewModel _vm;
 
 
@@ -34,12 +36,18 @@ namespace MMAApp.View
         /// constructor
         /// </summary>
         public MatchWindow()
-        {
-            
+        {    
             InitializeComponent();
             InitUI();
+            InitTimer();
+        }
 
-
+        private void InitTimer()
+        {
+            Timer timer = new Timer(_roundLength); //magic number
+            timer.Interval = _timerInterval;
+            timer.Enabled = true;
+            timer.Elapsed += OnTimedEvent;
         }
 
 
@@ -64,15 +72,14 @@ namespace MMAApp.View
             Body2.Text = _bodyStrike2.ToString();
             Leg2.Text = _legStrike2.ToString();
 
-            Timer timer = new Timer(300000); //magic number
-            timer.Interval = 1000;
-            timer.Enabled = true;
-            timer.Elapsed += OnTimedEvent;
-
-
             _vm = new MatchWindowViewModel();
         }
 
+        /// <summary>
+        /// executes when interval elapsed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
             this.Dispatcher.Invoke(() =>
