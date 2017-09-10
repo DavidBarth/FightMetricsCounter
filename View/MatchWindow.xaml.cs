@@ -75,8 +75,12 @@ namespace MMAApp.View
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
-            _secondCounter++;
-            CounterLabel.Text = _secondCounter.ToString(); 
+            this.Dispatcher.Invoke(() =>
+            {
+                _secondCounter++;
+                CounterLabel.Text = _secondCounter.ToString();
+            });
+            
         }
 
 
