@@ -62,6 +62,8 @@ namespace MMAApp.View
         }
 
 
+
+
         /// <summary>
         /// event fires when the relevant key is pressed 
         /// calls AddPointToFighter in VM

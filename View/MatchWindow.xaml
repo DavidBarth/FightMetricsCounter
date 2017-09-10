@@ -27,7 +27,7 @@
         <GroupBox x:Name="groupBox" Header="Press characters accordingly" Margin="22,86,23,0" VerticalAlignment="Top" Height="129">
         </GroupBox>
 
-        
+
         <TextBlock x:Name="HeadTextBlock1" HorizontalAlignment="Left" Margin="45,124,0,0" TextWrapping="Wrap" Text="Head Strikes Q" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625" Width="88"/>
         <TextBlock x:Name="BodyText1Block1" HorizontalAlignment="Left" Margin="45,158,0,0" TextWrapping="Wrap" Text="Body Strikes W" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
         <TextBlock x:Name="LegTextBlock1" HorizontalAlignment="Left" Margin="45,189,0,0" TextWrapping="Wrap" Text="Leg Strikes E" VerticalAlignment="Top" Height="16" RenderTransformOrigin="0.456,-0.625"/>
@@ -46,8 +46,12 @@
         <TextBlock x:Name="Body2" TextWrapping="Wrap" Margin="443,155,23,211"/>
         <TextBlock x:Name="Leg2" HorizontalAlignment="Left" Margin="443,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
 
-        <Button x:Name="button" Content="SAVE RESULTS" HorizontalAlignment="Left" Margin="213,295,0,0" VerticalAlignment="Top" Width="100"/>
-        
+        <Button x:Name="button" Content="SAVE RESULTS" HorizontalAlignment="Left" Margin="402,331,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="StartTimer" Content="StartTimer" HorizontalAlignment="Left" Margin="106,237,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="StopTimer" Content="StopTimer" HorizontalAlignment="Left" Margin="106,331,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="CounterLabel" Background="Wheat" Content="" HorizontalAlignment="Left" Margin="106,285,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="TimerLabel" Content="Match Time" HorizontalAlignment="Left" Margin="22,285,0,0" VerticalAlignment="Top" Width="79"/>
+
 
 
     </Grid>
