@@ -49,7 +49,7 @@
         <Button x:Name="button" Content="SAVE RESULTS" HorizontalAlignment="Left" Margin="402,331,0,0" VerticalAlignment="Top" Width="100"/>
         <Button x:Name="StartTimer" Content="StartTimer" HorizontalAlignment="Left" Margin="106,237,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="StopTimer" Content="StopTimer" HorizontalAlignment="Left" Margin="106,331,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="CounterLabel" Background="Wheat" Content="" HorizontalAlignment="Left" Margin="106,285,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="CounterLabel" Background="Wheat" HorizontalAlignment="Left" Margin="106,285,0,0" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="TimerLabel" Content="Match Time" HorizontalAlignment="Left" Margin="22,285,0,0" VerticalAlignment="Top" Width="79"/>
 
 

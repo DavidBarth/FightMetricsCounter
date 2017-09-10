@@ -2,6 +2,7 @@
 using MMAApp.Model;
 using MMAApp.ViewModel;
 using System.Collections.Generic;
+using System.Timers;
 using System.Windows.Input;
 
 namespace MMAApp.View
@@ -24,6 +25,8 @@ namespace MMAApp.View
 
         public List<Results> MatchResults { get; set; }
 
+        private int _secondCounter = 0;
+
         private MatchWindowViewModel _vm;
 
 
@@ -32,8 +35,11 @@ namespace MMAApp.View
         /// </summary>
         public MatchWindow()
         {
+            
             InitializeComponent();
             InitUI();
+
+
         }
 
 
@@ -58,10 +64,20 @@ namespace MMAApp.View
             Body2.Text = _bodyStrike2.ToString();
             Leg2.Text = _legStrike2.ToString();
 
+            Timer timer = new Timer(300000); //magic number
+            timer.Interval = 1000;
+            timer.Enabled = true;
+            timer.Elapsed += OnTimedEvent;
+
+
             _vm = new MatchWindowViewModel();
         }
 
-
+        private void OnTimedEvent(object sender, ElapsedEventArgs e)
+        {
+            _secondCounter++;
+            CounterLabel.Text = _secondCounter.ToString(); 
+        }
 
 
         /// <summary>
